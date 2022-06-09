@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mailing_Lists>
+  <Mailing_list name="Test1">
+    <Email>speedlightsaad@gmail.com</Email>
+    <Email>sa.hadiche@gmail.com</Email>
+  </Mailing_list>
+  <Mailing_list name="test2">
+    <Email>sa.hadiche@gmail.com</Email>
+    <Email>speedlightsaad@gmail.com</Email>
+  </Mailing_list>
+</Mailing_Lists>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emails>
+  <email id="22">
+    <from>whysoserious1500@gmail.com</from>
+    <to>sa.hadiche@gmail.com</to>
+    <subject>yes</subject>
+    <body>test</body>
+    <is_archived>false</is_archived>
+    <is_attached>false</is_attached>
+    <Attachements />
+  </email>
+  <email id="23">
+    <from>whysoserious1500@gmail.com</from>
+    <to>sa.hadiche@gmail.com</to>
+    <subject>yes</subject>
+    <body>testgg</body>
+    <is_archived>false</is_archived>
+    <is_attached>false</is_attached>
+    <Attachements />
+  </email>
+  <email id="24">
+    <from>whysoserious1500@gmail.com</from>
+    <to>speedlightsaad@gmail.com</to>
+    <subject>yes</subject>
+    <body>testgg</body>
+    <is_archived>false</is_archived>
+    <is_attached>false</is_attached>
+    <Attachements />
+  </email>
+  <email id="25">
+    <from>whysoserious1500@gmail.com</from>
+    <to>sa.hadiche@gmail.com</to>
+    <subject>Test1</subject>
+    <body>test152265</body>
+    <is_archived>false</is_archived>
+    <is_attached>false</is_attached>
+    <Attachements />
+  </email>
+</emails>

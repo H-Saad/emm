@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emails>
+  <email id="5">
+    <from>speedlightsaad@gmail.com</from>
+    <to>whysoserious1500@gmail.com</to>
+    <subject>No attachement test</subject>
+    <body>This is a non attached msg</body>
+    <is_archived>false</is_archived>
+    <is_attached>false</is_attached>
+    <Attachements />
+  </email>
+  <email id="6">
+    <from>speedlightsaad@gmail.com</from>
+    <to>whysoserious1500@gmail.com</to>
+    <subject>This is a double attached msg</subject>
+    <body>javax.mail.internet.MimeMultipart@703609b4</body>
+    <is_archived>false</is_archived>
+    <is_attached>true</is_attached>
+    <Attachements>
+      <Attachement Name="1erepartie_CoursDBA_oracle_INDIA2022.pdf">ressources/attachements/whysoserious1500@gmail.com/1erepartie_CoursDBA_oracle_INDIA2022.pdf</Attachement>
+    </Attachements>
+  </email>
+  <email id="2">
+    <from>no-reply@accounts.google.com</from>
+    <to>whysoserious1500@gmail.com</to>
+    <subject>Alerte de sécurité</subject>
+    <body>[image: Google]Votre mot de passe a été modifiéwhysoserious1500@gmail.comLe mot de passe de votre compte Google whysoserious1500@gmail.com a étémodifié. Si vous n'êtes pas à l'origine de cette modification, nous vousconseillons de récupérer votre compte.Vous pouvez aussi voir l'activité liée à la sécurité de votre compte ici :https://myaccount.google.com/notificationsCet e-mail vous a été envoyé pour vous informer de modificationsimportantes apportées à votre compte et aux services Google que vousutilisez.© 2022 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</body>
+    <is_archived>false</is_archived>
+    <is_attached>false</is_attached>
+    <Attachements />
+  </email>
+</emails>

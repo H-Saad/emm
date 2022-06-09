@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Inbox">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="269.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="36.0" prefWidth="269.0" style="-fx-background-color: gray;">
+               <children>
+                  <Text fx:id="userEmail" layoutX="24.0" layoutY="20.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="231.044921875">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <FontAwesomeIconView glyphName="USER" layoutX="9.0" layoutY="23.0" size="20" text="" />
+               </children>
+            </Pane>
+            <Button fx:id="normal" layoutX="86.0" layoutY="106.0" mnemonicParsing="false" opacity="0.7" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: NONE;" text="INBOX" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="INBOX" size="20" text="" />
+               </graphic>
+            </Button>
+            <Button fx:id="saved" layoutX="87.0" layoutY="146.0" mnemonicParsing="false" opacity="0.7" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: NONE;" text="SAVED" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="DOWNLOAD" size="20" />
+               </graphic>
+            </Button>
+            <Button fx:id="archived" layoutX="83.0" layoutY="186.0" mnemonicParsing="false" opacity="0.7" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: NONE;" text="ARCHIVED" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FOLDER" size="20" />
+               </graphic>
+            </Button>
+            <Button fx:id="sent" layoutX="89.0" layoutY="226.0" mnemonicParsing="false" opacity="0.7" style="-fx-background-color: NONE;" text="SENT" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SHARE" size="20" />
+               </graphic>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: none;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="318.0" style="-fx-background-color: #dedcd7; -fx-border-color: gray;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="36.0" prefWidth="332.0" style="-fx-background-color: #c9c8c3; -fx-border-color: gray;">
+               <children>
+                  <Text fx:id="inboxText" layoutX="141.0" layoutY="23.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="INBOX">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <ScrollPane fx:id="inboxPane" hbarPolicy="NEVER" layoutY="36.0" pannable="true" prefHeight="463.0" prefWidth="322.0" style="-fx-background-color: E5E5E5;">
+               <content>
+                  <AnchorPane prefHeight="461.0" prefWidth="326.0" style="-fx-background-color: E5E5E5;">
+                     <children>
+                        <VBox fx:id="mailVbox" spacing="10.0" style="-fx-background-color: E5E5E5;">
+                           <children>
+                              <TextField fx:id="searchBar" prefHeight="25.0" prefWidth="296.0" promptText="Search:" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="317.0" style="-fx-background-color: F3F3F3;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="20.0" layoutY="120.0" prefHeight="260.0" prefWidth="282.0" style="-fx-background-color: E5E5E5; -fx-background-radius: 2em;">
+               <children>
+                  <JFXTextArea fx:id="previewBody" editable="false" focusColor="#8a8b8d" layoutX="6.0" layoutY="5.0" prefHeight="250.0" prefWidth="270.0" unFocusColor="#e5e5e5" />
+               </children></Pane>
+            <Pane layoutX="-1.0" prefHeight="36.0" prefWidth="318.0" style="-fx-background-color: #c9c8c3; -fx-border-color: gray;">
+               <children>
+                  <Text layoutX="14.0" layoutY="23.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="MESSAGE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="newMail" layoutX="170.0" layoutY="8.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#newMessage" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: none;">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ENVELOPE" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="saveMail" layoutX="230.0" layoutY="8.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#saveMail" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: none;">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="BOOKMARK" text="" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="Reply" layoutX="260.0" layoutY="8.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#reply" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: none;">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="reply" glyphName="REPLY" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="DeleteMail" layoutX="290.0" layoutY="8.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#deleteMail" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: none;">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="TRASH" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="archiveMail" layoutX="200.0" layoutY="8.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#archiveMail" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: none;">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="FOLDER" />
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <ScrollPane hbarPolicy="NEVER" layoutX="20.0" layoutY="395.0" prefHeight="79.0" prefWidth="282.0" style="-fx-background-color: none;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="77.0" prefWidth="282.0" style="-fx-background-color: E5E5E5; -fx-background-radius: 2em;">
+                     <children>
+                        <VBox fx:id="attach" prefHeight="67.0" prefWidth="282.0" style="-fx-background-color: E5E5E5; -fx-background-radius: 2em;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Pane layoutX="28.0" layoutY="48.0" prefHeight="55.0" prefWidth="261.0" style="-fx-background-color: E5E5E5; -fx-background-radius: 2em;">
+               <children>
+                  <Text fx:id="previewFrom" layoutX="14.0" layoutY="20.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="224.13671875">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="previewSubj" layoutX="14.0" layoutY="42.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="224.13671875">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
