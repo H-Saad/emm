@@ -17,7 +17,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			credentials = new Credentials("whysoserious1500@gmail.com","ijtcrezddhncgtqw");
+			credentials = new Credentials("test123@gmail.com","testapppassword");
 			stg = primaryStage;
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("login.fxml"));
 			Scene scene = new Scene(root,900,500);
